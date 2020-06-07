@@ -12,14 +12,9 @@ if [ -z "$GCP_SERVICE_ACCOUNT_KEY_FILE" ]; then
   exit 1
 fi
 
-gsutil config -e <<-EOF > /dev/null 2>&1
-${GCP_SERVICE_ACCOUNT_KEY_FILE}
-text
-EOF
+echo $GCP_SERVICE_ACCOUNT_KEY_FILE > json_file.json
+gcloud auth activate-service-account --key-file json_file.json
 
-sh -c "gsutil rsync $* -r ${SOURCE_DIR} gs://${GCP_STORAGE_BUCKET}/${DEST_DIR}"
+sh -c "gsutil -m rsync $* -r ${SOURCE_DIR} gs://${GCP_STORAGE_BUCKET}/${DEST_DIR}"
 
-gsutil config -e <<-EOF > /dev/null 2>&1
-null
-text
-EOF
+gcloud auth revoke --all
