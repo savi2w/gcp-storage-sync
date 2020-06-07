@@ -10,5 +10,5 @@ LABEL repository="https://github.com/weslenng/gcp-storage-sync"
 LABEL homepage="https://weslenng.dev/"
 LABEL maintainer="weslenng <weslenng@outlook.com>"
 
-ADD entrypoint.sh /
-ENTRYPOINT ["sh", "entrypoint.sh"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["./entrypoint.sh"]
