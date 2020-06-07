@@ -12,7 +12,7 @@ Mostly [`gsutil rsync` flags](https://cloud.google.com/storage/docs/gsutil/comma
 
 #### Example
 
-- `-d` mirror source and destination. [See](https://cloud.google.com/storage/docs/gsutil/commands/rsync#using--d-option-with-caution-to-mirror-source-and-destination)
+- `-d` mirror source and destination. [See.](https://cloud.google.com/storage/docs/gsutil/commands/rsync#using--d-option-with-caution-to-mirror-source-and-destination)
 
 ```yaml
 name: gcp-storage-sync
