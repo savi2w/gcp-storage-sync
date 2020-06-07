@@ -51,4 +51,4 @@ The following settings must be passed as environment variables as shown in the e
 
 This project is distributed under the [MIT license](LICENSE.md).
 
-##### Thanks to [s3-sync](https://github.com/jakejarvis/s3-sync-action).
+##### Thanks to [s3-sync.](https://github.com/jakejarvis/s3-sync-action)
