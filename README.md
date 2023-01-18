@@ -20,14 +20,14 @@ name: gcp-storage-sync
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: omppye-tech/gcp-storage-sync@master
+      - uses: omppye-tech/gcp-storage-sync@main
         with:
           args: -d
         env:
